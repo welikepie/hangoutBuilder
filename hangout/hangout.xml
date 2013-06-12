@@ -1,0 +1,18 @@
+<Module>
+	<ModulePrefs title="testApp">
+		<Require feature="rpc"/>
+		<Require feature="views"/>
+		<Require feature="locked-domain"/>
+	</ModulePrefs>
+	<Content type="html">
+		<![CDATA[   
+		<html>
+			<body> 
+				<script src="//plus.google.com/hangouts/_/api/v1/hangout.js"></script>
+				<iframe src="https://www.google.com/" style="width:100%; height:100%;"> 	
+	    	</body>
+	   </html>
+		]]>
+		
+	</Content>
+</Module>
