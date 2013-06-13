@@ -1,12 +1,12 @@
-base_url: "www.google.com" #URL where the resulting app is to be uploaded
-title : "A test app." #title of application
-app_description: "awesomeness" #Application description
-app_title : "testApp" #Title of application
+base_url: "" #URL where the resulting app is to be uploaded
+title : "" #title of application
+app_description: "" #Application description
+app_title : "" #Title of application for xml
 icon16x16: "" #Name of 16*16 px image 
 icon32x32: "" #Name of 32*32 px image
 icon280x140: "" #Name of 240*140 px image
 ToS: "" #Link to Terms of Service for app
 Privacy: "" #Link to privacy policy for app
 Support: "" #Link to support contact information
-iframe_url: "https://www.google.com/" #Link to what web page the app should display
-
+iframe_url: "" #Link to what web page the app should display
+google_analytics_id: "" #google analytics id. Should take format 'XXXXX-Y' .
