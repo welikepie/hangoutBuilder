@@ -91,6 +91,13 @@ int main(){
 	res.assign(results,results+sizeOfStrings);	
 	ofFile xml;
 	ofBuffer buff;
+	ofFile xmlFile("hangout.xml");
+	if(ofFile::doesFileExist(xmlFile.getAbsolutePath(),false) == false){
+	cerr << " - Critical Error : XML template file is missing. \n";
+				cout << "\n Press Enter to acknowledge. \n";
+				cin.get();
+				return 0;
+	}
 	try{
 	xml.open("hangout.xml", ofFile::ReadWrite,true);
 	buff = xml.readToBuffer();
@@ -111,9 +118,9 @@ int main(){
 	else{
 	hangout.replace(hangout.find("<%GA%>"),6," ");
 	}
-	ofFile test= "";
+	ofDirectory test("");
 	string folderPath = test.getAbsolutePath();
-	ofFile s = "..//hangout";
+	ofDirectory s("..//hangout");
 	if(ofDirectory::createDirectory("..//hangout",true,false) == true){
 		cout << "Directory 'hangout' created in the path "+s.getAbsolutePath()+" \n";
 	}
