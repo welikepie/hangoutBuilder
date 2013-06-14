@@ -230,12 +230,16 @@ int main(){
 	ofDirectory test("");
 	string folderPath = test.getAbsolutePath();
 	ofDirectory s("..//hangout");
-	if(ofDirectory::createDirectory("..//hangout",true,false) == true){
-		cout << "Directory 'hangout' created in the path "+s.getAbsolutePath()+" \n";
+
+	if(ofDirectory::doesDirectoryExist("..//hangout",true) == false){
+		if(ofDirectory::createDirectory("..//hangout",true,false) == true){
+			cout << "Directory 'hangout' created in the path "+s.getAbsolutePath()+" \n";
+		}
+		else{
+			cout << "Directory could not be created. Oh no! \n";
+		}
 	}
-	else{
-		cout << "Directory could not be created. Oh no! \n";
-	}
+	
 	ofBuffer wbuff;
 	wbuff.set(hangout.c_str(), hangout.size());
 	if(ofBufferToFile("..//hangout//hangout.xml", wbuff)){
