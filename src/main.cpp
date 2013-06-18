@@ -219,8 +219,8 @@ int main(){
 	cout << "\n";
 	string hangout = buff.getText();
 	//cout << hangout;
-	hangout.replace(hangout.find("<%TITLE%>"),9,res.at(1));
-	hangout.replace(hangout.find("<%URL%>"),7,res.at(2));
+	hangout.replace(hangout.find("<%TITLE%>"),9,res.at(0));
+	hangout.replace(hangout.find("<%URL%>"),7,res.at(1));
 	if(analyse == true){
 	hangout.replace(hangout.find("<%GA%>"),6,GA);
 	}

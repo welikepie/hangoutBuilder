@@ -1,4 +1,4 @@
-﻿Build started 14/06/2013 19:20:13.
+﻿Build started 18/06/2013 16:11:06.
      1>Project "C:\Users\AMRoche\Documents\Visual Studio 2010\of_v0.7.4_vs2010_release\apps\myApps\hangoutBuilder\hangoutBuilder.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "obj\Release\hangoutBuilder.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -32,4 +32,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.19
+Time Elapsed 00:00:24.44
