@@ -14,7 +14,7 @@ int main(){
 	//go one less up, because you're navigating out of the actual folder the .exe is in for the writing and reading.
 	//implement check for if the file is there. That too.
 	bool analyse = false;
-	string GA = "<script type=\"text/javascript\">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-<%GID%>']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>";
+	string GA = "<script type=\"text/javascript\">var _gaq = _gaq || [];_gaq.push(['_setAccount', '<%GID%>']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>";
 	vector<string> arr;
 	vector<string> res;
 	int sizeOfStrings = 3;
@@ -27,13 +27,15 @@ int main(){
 	}
 	if(ofDirectory::doesDirectoryExist("..//data",true) == false){
 		ofDirectory::createDirectory("..//data",true);
-		cout << "The data folder is missing. It has been created. Please find a template XML to insert in to it.";
+		cout << "\n Error: The \"data\" folder could not be found. Please refer to Section 2.3 of the readme to fix this. \n";
+		cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
 		cin.get();
 		return 0;
 	}
 	if(ofDirectory::doesDirectoryExist("..//templating",true) == false){
 		ofDirectory::createDirectory("..//templating",true);
-		cout << "The templating folder is missing. It has been created. Please find a template YML to insert in to it.";
+		cout << "\n Error: The \"templating\" folder could not be found. Please refer to Section 2.4 of the readme to fix this. \n";
+		cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
 		cin.get();
 		return 0;
 	}
@@ -50,16 +52,19 @@ int main(){
 	}
 
 	if(propPath == ""){
-		cout << "properties.yml not found in the templating folder. \n";
-		cout << "\n Press Enter to acknowledge. \n";
-		cin.get();
+		cout << "\n Error: The file \"properties.yml\" is missing. Please refer to Section 2.2 of the Readme to fix this. \n";
+			cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 		return 0;
 	}
 
 	if(ofDirectory::doesDirectoryExist("..//images",true) == true){
 			if(ofDirectory::doesDirectoryExist("..//images//16x16",true)==true){
 				if(ofDirectory::isDirectoryEmpty("..//images//16x16",true)==true){
-					cout << " - Warning - 16x16 Image folder is empty. \n";
+						cout << "\n Warning: You have not included a 16x16 image for your application. \n";
+						cout << "Should you wish to, once the application has finished running you can add your images into the images/ folders and run the application again. \n";
+
 				}
 				else{
 					ofDirectory sixteen("..//images//16x16");
@@ -69,11 +74,14 @@ int main(){
 					sixteen.allowExt("gif");
 					sixteen.listDir();
 					if(sixteen.numFiles() == 0){
-						cout << " - Warning - 16x16 Image folder contains no valid types (jpg,png,gif)  \n";
+						cout << "\n Error: Your 16x16 image is in an incorrect format. All images should be saved as a '.png', '.jpg', '.jpeg' or '.gif'. Please amend this and run the application again. \n";
+					
 					}
 					else if(sixteen.numFiles() > 1){
-						cout << " - Warning - 16x16 Image folder contains more than one viable image type. Please select type.  \n";
-						cin.get();
+						cout << "\n Error: There are too many images in the 16x16 folder. Please make sure there is only one. \n";
+							cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 						return 0;
 					}
 					else{
@@ -81,7 +89,7 @@ int main(){
 						string path = sixteen.getPath(0);
 						string name = sixteen.getName(0);
 						ofFile::copyFromTo(ofFilePath::getAbsolutePath(path,true),ofFilePath::getAbsolutePath("..//hangout//16x16."+six.getExtension(),true),false,true);
-						cout << "16 x 16px image copied and renamed into hangouts folder. \n";
+						cout << "Your 16x16 image has been added. The image has been renamed \"16x16\". \n";
 					}
 				}
 			}else{
@@ -90,7 +98,9 @@ int main(){
 
 			if(ofDirectory::doesDirectoryExist("..//images//32x32",true)==true){
 				if(ofDirectory::isDirectoryEmpty("..//images//32x32",true)==true){
-					cout << " - Warning - 32x32 Image folder is empty. \n";
+						cout << "\n Warning: You have not included a 32x32 image for your application. \n";
+						cout << "Should you wish to, once the application has finished running you can add your images into the images/ folders and run the application again. \n";
+
 				}
 				else{
 					ofDirectory thirtytwo("..//images//32x32");
@@ -100,11 +110,13 @@ int main(){
 					thirtytwo.allowExt("gif");
 					thirtytwo.listDir();
 					if(thirtytwo.numFiles() == 0){
-						cout << " - Warning - 32x32 Image folder contains no valid types (jpg,png,gif) \n";
+						cout << "\n Error: Your 32x32 image is in an incorrect format. All images should be saved as a '.png', '.jpg', '.jpeg' or '.gif'. Please amend this and run the application again. \n";
 					}
 					else if(thirtytwo.numFiles() > 1){
-						cout << " - Warning - 32x32 Image folder contains more than one viable image type. Please select type. \n";
-						cin.get();
+						cout << "\n Error: There are too many images in the 32x32 folder. Please make sure there is only one. \n";
+						cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 						return 0;
 					}
 					else{
@@ -112,7 +124,7 @@ int main(){
 						string path = thirtytwo.getPath(0);
 						string name = thirtytwo.getName(0);
 						ofFile::copyFromTo(ofFilePath::getAbsolutePath(path,true),ofFilePath::getAbsolutePath("..//hangout//32x32."+three.getExtension(),true),false,true);
-						cout << "32 x 32px image copied and renamed into hangouts folder. \n";
+						cout << "Your 32x32 image has been added. The image has been renamed \"32x32\". \n";
 					}
 				}
 			}else{
@@ -121,7 +133,9 @@ int main(){
 			
 			if(ofDirectory::doesDirectoryExist("..//images//240x140",true)==true){
 				if(ofDirectory::isDirectoryEmpty("..//images//240x140",true)==true){
-					cout << " - Warning - 240x140 Image folder is empty. \n";
+					cout << "\n Warning: You have not included a 240x140 image for your application. \n";
+					cout << "Should you wish to, once the application has finished running you can add your images into the images/ folders and run the application again. \n";
+
 				}
 				else{
 					ofDirectory twofourty("..//images//240x140");
@@ -131,11 +145,13 @@ int main(){
 					twofourty.allowExt("gif");
 					twofourty.listDir();
 					if(twofourty.numFiles() == 0){
-						cout << " - Warning - 240x140 Image folder contains no valid types (jpg,png,gif) \n";
+						cout << "\n Error: Your 240x140 image is in an incorrect format. All images should be saved as a '.png', '.jpg', '.jpeg' or '.gif'. Please amend this and run the application again. \n";
 					}
 					else if(twofourty.numFiles() > 1){
-						cout << " - Warning - 240x140 Image folder contains more than one viable image type. Please select type. \n";
-						cin.get();
+						cout << "\n Error: There are too many images in the 240x140 folder. Please make sure there is only one. \n";
+							cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 						return 0;
 					}
 					else{
@@ -143,7 +159,7 @@ int main(){
 						string path = twofourty.getPath(0);
 						string name = twofourty.getName(0);
 						ofFile::copyFromTo(ofFilePath::getAbsolutePath(path,true),ofFilePath::getAbsolutePath("..//hangout//240x120."+two.getExtension(),true),false,true);
-						cout << "240 x 140px image copied and renamed into hangouts folder. \n";
+						cout << "Your 240x140 image has been added. The image has been renamed \"240x140\". \n";
 					}
 				}
 			}else{
@@ -152,14 +168,12 @@ int main(){
 		}
 	else{
 		ofDirectory::createDirectory("..//images",true,false);
-		cout << "images directory not found, has been created.";
+		cout << "\n Error: The images folder was not found. It has now been created. See the readme section 1.3 for what you can do with images in your application. \n";
 		ofDirectory::createDirectory("..//images//16x16",true,false);
 		ofDirectory::createDirectory("..//images//32x32",true,false);
 		ofDirectory::createDirectory("..//images//240x140",true,false);
 	}
 
-
-	cout << "\n";
 	YAML::Node config = YAML::LoadFile(propPath);
 	for(YAML::const_iterator it=config.begin();it != config.end();++it) {
 	   std::string key = it->first.as<std::string>();       // <- key
@@ -177,16 +191,20 @@ int main(){
 		if(key.compare(arr.at(0))==0 || key.compare(arr.at(1))==0){
 			if(key.compare(arr.at(1))==0){
 				if(value.find("https://") == std::string::npos){
-					cerr << " - Critical Error : URL to display in application needs to be https://. \n";
+					cout << "\n Error: The iframe_url must begin with \"https://\". If the content is not hosted on a https:// enabled server, the content cannot be displayed. Please refer to Section 2.5 of the readme to fix this. \n";
 					//cout << "\n Press Enter to acknowledge. \n";
-					cin.get();
+						cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 					return 0;
 				}
 			}
 			if(value == ""){
-				cerr << " - Critical Error : Necessary key '"+key+"' for compilation is missing. \n";
+				cout << "\n Error: You have not included the "+key+" of your application, please go back to the \"properties.yml\" file and correct this. \n";
 				//cout << "\n Press Enter to acknowledge. \n";
-				cin.get();
+					cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 				return 0;
 			}
 		}
@@ -202,9 +220,11 @@ int main(){
 	ofBuffer buff;
 	ofFile xmlFile("hangout.xml");
 	if(ofFile::doesFileExist(xmlFile.getAbsolutePath(),false) == false){
-	cerr << " - Critical Error : XML template file is missing. \n";
+	cerr << "\n Error: The template file \"hangout.xml\" is missing. Please refer to Section 2.1 of the Readme to fix this.  \n";
 				//cout << "\n Press Enter to acknowledge. \n";
-				cin.get();
+					cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
+	cin.get();
+
 				return 0;
 	}
 	try{
@@ -212,9 +232,10 @@ int main(){
 	buff = xml.readToBuffer();
 	}
 	 catch (int n) {
-		 cout << n;
-		 cout << "\n Press Enter to acknowledge. \n";
+		cout << "\n Error: The hangout file could not be loaded. Please refer to Section 2.6 of the readme to fix this. \n";
+		cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
 		cin.get();
+		return 0;
 	  }	
 	cout << "\n";
 	string hangout = buff.getText();
@@ -233,22 +254,22 @@ int main(){
 
 	if(ofDirectory::doesDirectoryExist("..//hangout",true) == false){
 		if(ofDirectory::createDirectory("..//hangout",true,false) == true){
-			cout << "Directory 'hangout' created in the path "+s.getAbsolutePath()+" \n";
+			cout << "The \"hangout\" folder has been created. \n";
 		}
 		else{
-			cout << "Directory could not be created. Oh no! \n";
+			cout << "\n Error: The hangout folder could not be created. Please refer to Section 2.6 of the readme to fix this. \n";
 		}
 	}
 	
 	ofBuffer wbuff;
 	wbuff.set(hangout.c_str(), hangout.size());
 	if(ofBufferToFile("..//hangout//hangout.xml", wbuff)){
-		cout << "File hangout.xml created in the hangout directory. \n";
+		cout << "The \"hangout.xml\" file has been created in the \"hangout\" folder. This is what needs to be uploaded to your server and linked to in your Google+ App. \n";
 	} 
 	else{
-		cout << "File could not be written to! Oh no! \n";
+		cout << "\n Error: The hangout file could not be changed. Please refer to Section 2.6 of the readme to fix this. \n";
 	}
-	cout << "\n Writing operation finished successfully. \n";
+	cout << "\n The application has finished! If any errors occured, please fix them by referring to the readme and then run the application again. \n";
 	cin.get();
 	return 0;
 }

@@ -1,3 +1,9 @@
-﻿app_title : "testing" #Title of application
-iframe_url: "https://www.google.com/" #Link to what web page the app should display
-google_analytics_id : "指事文字" #Google Analytics ID
+﻿#The title of your Application
+app_title: "My Google Hangout"
+
+#The link that contains the content you want your application to display. Must start with "https://", refer to the Section 2.5 of the readme for more information on this. 
+iframe_url: "https://www.mywebsite.com/hangoutcontent.html"
+
+# Your Google Analytics ID. Including this ID allows you to see the statistics of who has interacted with your Google Hangout App. This is not necessary to run the application. Refer to Section 5 of the readme on how to set one up. 
+google_analytics_id: "XX-XXXXXXXX-X" 
+
