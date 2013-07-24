@@ -1,0 +1,84 @@
+# Section One: Using the HangoutBuilder Application
+
+This guide will take you through the steps in how to use HangoutBuilder to build your own Google+ Hangout. **Using HangoutBuilder.app (Mac) or HangoutBuilder.exe (Windows) will create a file called “hangout.xml”**. This file will be what you need to host and link to when you’re creating your Google Hangout Application in Section Four. 
+
+
+***
+
+**1.1 Downloading your application.**
+
+First, you need to download the folder containing HangoutBuilder.app/.exe and it’s associated folders. **It is recommended that you save it to your Desktop**. 
+
+What you have downloaded should look like this (Mac Version)
+
+![HangoutBuilder Mac Version](images/macfolderview.png)
+
+What you have downloaded should look like this (Windows Version)
+
+![HangoutBuilder Windows Version](images/hangoutfolderwindows.png)
+
+
+**1.2 Specifying the details of your Hangout**
+
+Before you run the Hangout Builder application. You need to edit a file called **“properties.yml”**, this file will upload your specified settings for your application, including the content you want to display. **You will find “properties.yml” in the “templating” folder**.
+
+The templating folder on a Mac
+
+![Templating Folder (Mac)](images/templatingfoldermac.png)
+
+The "templating" folder on Windows
+
+![Templating Folder (Windows)](images/propertieswindows.png)
+
+**Open "properties.yml" in the text editor of your choice.**
+Some recommended editors are: [Sublime Text 2](http://www.sublimetext.com/2) (Windows & Mac), [TextMate](http://macromates.com/) (Mac) and [Notepad++](http://notepad-plus-plus.org/) (Windows)
+
+![Properties.yml File](images/properties.png)
+
+You will see three things that you need to edit in this file;
+
+* **"app_title"** - The title of your application
+* **"iframe_url"** - Where the content you want to display within your Google+ Hangout is located. Example: "https://www.yourdomain.com/hangout_application". It **must begin with "https://"** as we need to display secure content. If your domain is not secure, please **refer to Section Two on how to rectify this**.
+* **"google_analytics_id** - (optional). Input your google analytics ID (or create one using section five of this readme) to track usage of your Google+ Hangout. 
+
+Edit these with your details and then save the file.
+**Make sure it is saved as "properties.yml"**
+
+If you make a mistake in your “properties.yml” file, you can find a fresh version called **“propertiesTemplate.yml” in the “data” folder**. Copy this into the “templating” folder, and edit it accordingly. But make sure to rename it **“properties.yml” as the application looks for that specific file.**
+
+
+**1.3 [Optional Step] Adding Images to your Hangout**
+
+Your Google Hangout Application can make use of three image sizes
+* **A 16x16 image** that identifies your application
+* **A 32x32 image** that identifies your application in the recent applications and active applications lists on Google Hangouts.
+* **A 240x140 image**, this is what users will see when they are starting up your application. 
+
+To include these images in your application, you need to **add your images to the “images” folder of the HangoutBuilder**. There is a folder for each image size. 
+
+![Images Folder (Mac)](images/imagesfolder.png)
+
+![Images Folder (Windows)](images/imageswindows.png)
+
+When you have created your image, you can add it to these folders and the HangoutBuilder will reference these. 
+
+**Please make sure the images are saved as either a .png, .jpg, .jpeg or .gif**, the hangout will be unable to display any other image format. Please also make sure there is only a single image in each of these folders or else the HangoutBuilder will not be able to build your “hangout.xml” file. 
+
+
+**1.4. Running HangoutBuilder.**
+
+We’re now ready to build your “hangout.xml” file using the HangoutBuilder.app/.exe. 
+
+**Double click the application to get started**. If you’re using a Mac, a “Terminal” window will open, if you’re on a Windows Machine, a “Command Line” window will open. **This window will display what is happening when the HangoutBuilder is running and will alert you of any errors that occur.**
+
+If you have followed the steps correctly, **your hangout.xml file will be created and your images will be renamed**. Both your images and your hangout.xml file will now be found in the **“hangout” folder** and will look something like the following:
+
+![Hangout Folder](images/hangoutfolder.png)
+
+If you encounter any errors whilst running HangoutBuilder, read the error messages that come up. They will often refer to the Section Two of this Readme, where you can look to fix these problems. **Once you’ve fixed any errors, run the HangoutBuilder again and it will create your “hangout.xml” file in the “hangout” folder**.
+
+**1.5 What to do with your newly created "hangout.xml" file.**
+
+Now that you've created your "hangout.xml" file, all you need to do now is upload it to the web and link to it when you're creating your Google+ Hangout in Section Four.
+
+If you do not have access to your server, you can upload it to a multitude of services such as [GitHub](http://www.github.com), [Google Code](http://www.code.google.com) or [Amazon Web Services](http://www.aws.amazon.com). In Section Three of this readme, we go over how we can upload content files securely to GitHub. **You can follow the same steps to upload your "hangout.xml" file.**

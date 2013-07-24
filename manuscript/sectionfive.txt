@@ -1,0 +1,16 @@
+# Section Five: Adding Google Analytics to your Application
+
+Using HangoutApp.app / HangoutApp.exe allows you to input a **Google Analytics ID**, which will allow you to collect stats on your Hangout Application, such as how many people used it at a certain time, and where they visited from. 
+
+If you don’t already have a Google Analytics account, you first need to create one.
+Go to this URL to get started: [http://www.google.com/analytics/](http://www.google.com/analytics/) and click **“Sign Up”**.
+
+Make sure you select **“Website”** to track. 
+
+Choose between **“Universal Analytics”** or **“Classic Analytics”**, depending on your preference. Fill out the rest of the form and click **“Get Tracking ID”**.
+
+**Submit, and accept the terms of service.**
+
+You will be then taking to the Tracking Info of the analytics you just created. Add the top right, you will see you tracking code! **This is what can be copied and pasted into the “properties.yml” file.** If you have modified your "properties.yml" file and have already run the HangoutBuilder application, you must run it again and upload your change hangout.xml file as your Google+ Hangout will not have analytics until you do so.
+
+![Google Analytics ID](images/trackingid.png)

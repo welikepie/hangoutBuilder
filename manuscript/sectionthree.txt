@@ -1,0 +1,68 @@
+# Section Three: Uploading your Secure Content
+
+In this tutorial, we will be using **GitHub** to upload and store your secure content. However, there are other options available such as [Google Code](http://www.code.google.com) or [Amazon Web Services](http://www.aws.com).
+
+**3.1. Create an Account on [GitHub](http://www.github.com)**
+
+Click the “Sign Up” button and enter your desired username, your email and your desired password. 
+
+**3.2. Download a Git Client**
+
+A Git client is an application that will allow you to upload files to GitHub from your computer. There are many available such as [SourceTree](http://www.sourcetreeapp.com/), [GitBox](http://gitboxapp.com/), [GitHub for Mac/Windows](www.github.com) and [GitX](http://gitx.org/). In this tutorial, **we’ll be using “GitHub for Mac”**.
+
+**3.3. Sign into your GitHub account**
+
+Open up your freshly downloaded GitHub client and go to **GitHub > Preferences**. Here you will see the accounts tab, where you’ll be able to sign in with the account you created in Step 1. 
+
+**3.4. Create a New Repository.**
+
+A repository is where you will keep your files. Go to File > Create a New Repository. 
+
+![Create a Repository](images/createrepo.png)
+
+Choose the name for your repository and where it will be stored on your computer. In this case we have it in a folder called “HangoutContent” in a second folder called “GitHub”. When you’re ready, click **“Create Repository”**. 
+
+![Create Repository](images/createrepo2.png)
+
+**3.5. Add your Hangout content to your repository**
+
+After you’ve created your repository, you’ll be taken to a window that contains the contents of your repository. So far, there is nothing. We need to add your content and upload it to GitHub.
+
+Copy your content into your newly created repository. For this tutorial, we’ll be uploading a HTML file containing some basic content. 
+
+This is what our HangoutContent folder/repository looks like after we’ve added our content files. 
+
+![Hangout Repo Content](images/hangoutcontent.png)
+
+**3.6. Upload your content to GitHub**
+
+Currently, your content is still only located on your computer. We need to upload it to the GitHub servers! 
+Go back to your GitHub client, make sure you’re looking at your HangoutContent repository, then click on “Changes”. There will see a page similar to the following:
+
+![My First Commit](images/firstcommit.png)
+
+This is where you’ll be “committing” your content files. **Telling GitHub that you’d like to put these files on their servers.** When you’ve written the title of your changes and a description, go ahead and click “commit”. 
+
+Now, your content file is ready to be committed. Click **“push to GitHub”** in the top-right hand corner. Your client will now upload your files to the GitHub servers!
+
+Once your files have been pushed, feel free to close your Git Client as you will no longer need it for the remaining steps. 
+
+**3.7. Accessing your secure files.**
+
+1. Access your profile on GitHub.com by going to http://www.github.com/YOURUSERNAME.
+2. Click on the “Repositories” Tab and then your “HangoutContent” repository.
+3. Click on the file you have just uploaded. In this example, we’ll be clicking on “content.html”. 
+
+![Hangout Content](images/contenthtml.png)
+
+We need to access the raw data of this file. Go ahead and click “raw” like below.
+
+![Raw File Click](images/rawclick.png)
+
+You will be taken to a page that looks like the following:
+
+![Raw Content](images/rawlooking.png)
+
+**The URL above is what you can use as your iFrame URL!**
+
+Copy and paste this into your “properties.yml” file back in the hangoutbuilder templating folder and run the application. You will now have a valid **“hangout.xml”** file which you can also host on GitHub if you wish (though it is not necessary as the hangout.xml can be hosted with a generic http:// domain) and link to when you’re setting up your Google Hangout Application in the next section.

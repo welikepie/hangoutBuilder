@@ -1,0 +1,163 @@
+# Section Four: How to Create a Google+ Hangout Application
+
+Once you’ve run the HangoutBuilder and have your “hangout.xml”, you are ready to create your Google Hangout Application Online!
+
+**4.1. Create a Google Project**
+
+To create your Google+ Hangout, visit the following page:
+[Google Code APIs](https://code.google.com/apis/console)
+
+**4.2**. After signing in with your Google account (or creating one if you do not have one), you will see the following page. Click on **“Create Project...”**
+
+![Create Project](images/createproject.png)
+
+**4.3. Enable the Google+ Hangouts API**
+
+After clicking **“Create Project...”** you will be taken to the “Services” page. This is where you will choose what Google Technology your application will be using. In this case we will be using the **“Google+ Hangouts API”** service.
+
+![Turn on API](images/googleapi.png)
+
+Click the button to turn the API **“on”**. This will now allow you to use Google+ Hangouts in your application. 
+
+When you click to turn it on, you will be presented some term of services to accept to continue using the API. **Accept these terms and conditions**. 
+
+
+**4.4. Creating an API Access Key** 
+Before we get to creating your hangout, you need to create an **access key to use the Google+ Hangouts API**. To do this, go to the “**API Access**” link on the left-hand toolbar. 
+
+You will be presented with the screen below. Click on the blue “**Create an OAuth 2.0 client ID...**” button to get started. 
+
+![Create OAUTH API](images/apiaccess.png)
+
+You will be shown a screen asking you to create you “Client ID”. Input the name of your application, the link to your logo (if you want) and a link to your homepage. Then click “next” to continue. 
+
+![Create Client ID Part 1](images/clientidnew.png)
+
+In the next step of creating the “Client ID”, you need to **make sure your “Application type” is set to “Web application”**. You also need to input your website URL. 
+
+Once you’ve finished, click “Create Client ID” and you’ll be able to work with the “Google+ Hangout API”!
+
+![Create Client ID 2](images/createclientid2.png)
+
+**4.5. Creating your Google+ Hangout**
+
+Click on the “Hangouts” link in the left-hand sidebar and you will be presented with the following page. Fill in the details like it has been done below, but with your own URL’s and descriptions. **Make sure that “Application Type” is set to “Main Application”**.
+
+It is not necessary to include links to images, but it is recommended so your app has it’s unique visual style. **It is required that you submit links to your Terms of Service, Privacy Policy, and Contact Page.** 
+
+![Hangout Creation 1](images/hangout1.png)
+![Hangout Creation 2](images/hangout2.png)
+
+Your “application URL” is where your hangout.xml will be stored. **This is the hangout.xml you created using the HangoutBuilder.app/HangoutBuilder.exe.** The files and folders from running that application should be upload to your server so it can be linked to in your Hangout Application setup. 
+
+If you choose to add images to your application, these should also be in the images folder created by your HangoutBuilder.app/HangoutBuilder.exe and uploaded to your server. 
+
+**4.6. Become a Chrome Web Store Developer** 
+
+You may have noticed that you were unable to click “save” above if you’ve ticked “Make your application available to all users”, which you should have. We just have one more step to go through before you have a fully fledged google hangout app. 
+
+You need to become a registered “Chrome Web Store Developer”. This will allow you to publish your hangout so it can be used by others. 
+
+Right click the “Chrome Web Store Developer” link to open it in a new tab, so all the information you’ve just input doesn’t get erased. 
+
+You will be presented with the following page. 
+
+![Become a Chrome Store Developer](images/becomedeveloper.png)
+
+In order to become a Chrome WebStore Developer, and have the ability to make your Hangout App available to use by others, you need to pay a one-time $5 fee. Click “pay this fee now” to do so. Accept the terms and conditions and you will be taken to the transaction page via Google Wallet. Once that is done, your account will now be a registered Chrome Developer! 
+
+Go back to the Hangout you were creating and you should be able to click “save”. Your settings will save and you have now created your hangout app!
+
+**4.7. Show your application to others**
+
+
+Now that we’ve created an app, we want to be able to let other people access it. 
+To do this, **we need to find our project ID**. 
+
+To get our project ID we need to go to the summary of application by clicking “Overview” on the right hand sidebar. 
+
+![Project ID](images/projectnumber.png)
+
+The link to access your hangout and share it with us can be gotten by doing the following:
+
+Add your project ID to the end of the URL (replacing “APP_ID”).
+**https://plus.google.com/hangout/_?gid=APP_ID**
+
+The Project ID above is “762199186061” so our hangout URL will be
+**https://plus.google.com/hangouts/_?gid=762199186061**
+Obviously your URL will be different as you will have a different project ID. 
+
+Paste this link into your address bar and you will see your application running. You can share this link with other people and they can now view your application in their own Hangout, _without you having to set a Hangout up_. 
+
+**You have now created your Google+ Hangout Application**. You have completed the tutorial! If you'd like to learn how to share your application with others, see below. 
+
+***
+
+**4.8 Sharing your Google+ Hangout with others**
+
+If you'd just like another person to take a look at the application you've built, you can send them the link which includes your Google Project ID that we created in Section Four[link].
+
+**Google+ Hangouts are meant to be experience with others**, so next we'll walk through how to start your application and **invite other people to hang out with you**. 
+
+Go to http://plus.google.com and sign in with your Google account if you haven't already done so. Then find and click the **hangout** icon to **start a new Google+ Hangout**. 
+
+![Casual Google Hangout](images/casualhangout.png)
+
+Once you start the Hangout, you will have the option of sending a **"Party Invitation"** to friends you have on Google+. 
+
+![Party Invitation](images/partyinvitation.png)
+
+Next, we need to start your Hangout Application. Look to the left hand side of the page and you will find your application listed. Click on it to start it.
+
+![Left-Hand Sidebar, Start Application](images/myhangout.png)
+
+To share your Hangout with others, simply copy the URL in the address bar and send it to who you want. They will be able to join the hangout, start up your application from the left hand sidebar and view it with you!
+
+![Share URL](images/shareurl.png)
+
+One exciting way you can use your Google+ Hangout App and share it with others is by creating a **“Hangout On Air”**. A Hangout On Air allows you to live stream your Hangout, which you can then include in your own web page.
+
+The benefit of Hangouts on Air is that your Hangout will be streamed on YouTube, recorded and saved on your YouTube channel which means **people who missed the live hangout can view it at a later time**. 
+
+To start your own Hangout on Air, got to: [http://hangouts.google.com/onair](http://hangouts.google.com/onair)
+If this is your first time using Hangouts on Air, you will be asked to connect your YouTube account to your Google Account, so you can livestream your hangout. Go ahead and click “Connect Account”
+
+![Connect On Air](images/onairconnect.png)
+
+You may be required to Verify your Account using either a Voice Call or an SMS process.
+Here, we are going to use the SMS Verification, but it is up to you which method you prefer.
+
+![Account Verification](images/accountverificationyt.png)
+
+After entering your phone number and clicking through to the next step, you should receive a verification code on your phone. Enter this code into the box provided on the page and click “Verify”. 
+
+Go back to the page where you were starting a Google Hangout on Air, click “Check Accounts” to show that your account has been verified. If verified you should be able to set up your hangout on air, by naming it and clicking “Start Hangout on Air”. 
+
+To run the application you’ve made in the previous sections of this Guide, within the Hangout on Air, your application should be on the left hand side of the Hangout. Click this to start your application.
+
+![Left-Hand Sidebar, Start Application](images/myhangout.png)
+
+You have now successfully started your Hangout, but it is not yet Live and viewable by others. 
+If you are ready to broadcast your Hangout, click the red “Start Broadcast” button on the top of the hangout.
+
+![Start Button](images/startbutton.png)
+
+**You can now share this hangout with people in one of two ways** 
+
+_1. By linking to the livestream on YouTube directly:_
+
+Click **“Embed”** in the top bar of your Hangout. You will see a YouTube URL. Feel free to copy this and send it to those you want to view the Hangout. 
+
+![Youtube URL](images/youtubeurl.png)
+
+_2. By embedding the LiveStream directly into your own web page._
+ 
+Click “Embed” in the top bar of your Hangout. You will see some HTML, it is an iFrame containing your LiveStream. You can copy this and include it in the HTML of your own web-page, like we have done below. 
+
+![Embedded HTML Sample](images/samplepagewhite.png)
+
+![Embedded Live Stream](images/livestreamtest.png)
+
+In order to end your broadcast, you can press the red “End Broadcast” button on the top of your hangout. 
+
+You have now successfully broadcast your very own Google Hangout Application to the public! 

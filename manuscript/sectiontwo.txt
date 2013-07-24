@@ -1,0 +1,54 @@
+# Section Two: How to fix any errors that occur when using HangoutBuilder
+
+**2.1 The template file “hangout.xml” is missing**
+
+If the hangout.xml file cannot be found by the application, your hangout cannot be created. 
+It is possible that it has been moved to another folder in the application, check through the folders of the application and if you find “hangout.xml”, simply move it to the “hangout” folder. 
+
+If you cannot find the “hangout.xml” file, please re-download the application and it’s folders, go back to Section One and run through the tutorial on HangoutBuilder again. 
+
+**2.2 The file “properties.yml” is missing**
+
+If the “properties.yml” file cannot be found by the application, your hangout cannot be created. 
+It is possible that it has been moved to another folder in the application, check through the folders of the application and if you find “properties.yml”, simply move it to the “templating” folder. 
+
+If you cannot find the “properties.yml” file, please re-download the application and it’s folders, go back to Section One and run through the tutorial on HangoutBuilder again. 
+
+**2.3 The “data” folder could not be found**
+
+If the data folder cannot be found by the HangoutBuilder application, your hangout files cannot be created. It is possible that it has been elsewhere in the HangoutBuilder folders. Check through the folders of the application and if you locate the data folder, simply move it to the HangoutBuilder folder alongside the templating, images and hangout folders.
+					
+If you cannot find the “data” folder, please re-download the application and its folders, go back to Section One and run through the tutorial on HangoutBuilder 
+							
+**2.4 The “templating” folder could not be found**
+
+The HangoutBuilder was unable to create your hangout because it could not find the “templating” folder, which it needs to run. The HangoutBuilder has created the “templating” folder for you. What you need to do is add “properties.yml” into the “data” folder. 
+
+If you cannot find “properties.yml”, check to make sure it hasn’t been moved to another location within the application. If it hasn’t, please redownload the application and run through Section One again.
+
+**2.5 The iframe_url must begin with "https://"** 
+
+For your Google+ Hangout to display the content you want, **the content must be hosted on a site that has a "https://" domain rather than a "http://" domain**. This is because Google want to make sure that the content is from a secure source. 
+
+If the server where your content is contained does not have "https://" access, you can amend this by doing the following:
+
+**Purchase a security certificate for your server**
+
+Some places where you can do this are:
+
+* [GoDaddy](http://uk.godaddy.com/ssl/ssl-certificates.aspx)
+* [123-Reg](http://www.123-reg.co.uk/ssl-certificates/)
+* [GlobalSign](https://www.globalsign.co.uk/ssl/)
+* [Digicert](http://www.digicert.com/)
+
+**OR**
+
+Store the content you wish to display with a service that allows you to use secure https://, such as [GitHub](www.github.com), [Google Code](www.code.google.com) or [Amazon Web Services](www.aws.amazon.com).
+
+If you would like to go the route of uploading your content files, follow the steps in Section Three. 
+
+**2.6 The file/folder could not be created/written to/loaded**
+
+If a file/folder could not be created/written to/loaded, the most likely cause of this is a permissions error. If your files are not already, please move HangoutBuilder and its associated folders to your Desktop and try again. 
+
+If this fails to work, please download the HangoutBuilder again and run through Section One again. 
