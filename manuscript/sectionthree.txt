@@ -1,68 +1,77 @@
 # Section Three: Uploading your Secure Content
 
-In this tutorial, we will be using **GitHub** to upload and store your secure content. However, there are other options available such as [Google Code](http://www.code.google.com) or [Amazon Web Services](http://www.aws.com).
+In this tutorial, we will be using **Git** & **Google Code** to upload and store your secure content. However, there are other options available such as [Amazon Web Services](http://www.aws.amazon.com).
 
-**3.1. Create an Account on [GitHub](http://www.github.com)**
+**3.1. Install [Git](http://git-scm.com/)**
 
-Click the “Sign Up” button and enter your desired username, your email and your desired password. 
+Download and install Git to your machine. This is to allow us to upload files to Google Code using the Command Line/Terminal. 
 
-**3.2. Download a Git Client**
+**3.2. Create a Google Code Project**
 
-A Git client is an application that will allow you to upload files to GitHub from your computer. There are many available such as [SourceTree](http://www.sourcetreeapp.com/), [GitBox](http://gitboxapp.com/), [GitHub for Mac/Windows](www.github.com) and [GitX](http://gitx.org/). In this tutorial, **we’ll be using “GitHub for Mac”**.
+This is where you will keep your content files. Go to File > Create a New Repository. 
 
-**3.3. Sign into your GitHub account**
+![Create a Google Code Project](images/1.png)
 
-Open up your freshly downloaded GitHub client and go to **GitHub > Preferences**. Here you will see the accounts tab, where you’ll be able to sign in with the account you created in Step 1. 
+Choose the name for your project, give it a description and select a License for your content material. The most important step here is that you set **version control** to **Git**.
 
-**3.4. Create a New Repository.**
+![Git Version Control](images/2.png)
 
-A repository is where you will keep your files. Go to File > Create a New Repository. 
+**3.3. Prepare yourself your project to upload your files**
 
-![Create a Repository](images/createrepo.png)
+Go to your [Google Code Settings](https://code.google.com/hosting/settings). You should find a password on this page, or generate a new one if need be. Keep note of this password as you'll need to use this at a later stage of this tutorial. 
 
-Choose the name for your repository and where it will be stored on your computer. In this case we have it in a folder called “HangoutContent” in a second folder called “GitHub”. When you’re ready, click **“Create Repository”**. 
+![Password](images/3.png)
 
-![Create Repository](images/createrepo2.png)
+Remaining on this page, scroll down until you find the **Security** subtitle. Tick the box. 
 
-**3.5. Add your Hangout content to your repository**
+![Security](images/4.png)
 
-After you’ve created your repository, you’ll be taken to a window that contains the contents of your repository. So far, there is nothing. We need to add your content and upload it to GitHub.
+**3.4. Upload your content to Google Code**
 
-Copy your content into your newly created repository. For this tutorial, we’ll be uploading a HTML file containing some basic content. 
+Go to the **Source** tab of your Google Code project. You should be on the "Checkout" page. 
 
-This is what our HangoutContent folder/repository looks like after we’ve added our content files. 
+Copy the code on the page that will look something like: 
 
-![Hangout Repo Content](images/hangoutcontent.png)
+`git clone https://name%40domain.com@code.google.com/p/my-project-name/`
 
-**3.6. Upload your content to GitHub**
+Open up a Command Line (Windows) or Terminal (Mac) window on your machine. Navigate to where you want to have your GoogleCode folder: in this tutorial we went to our desktop by typing "cd desktop" into the terminal window and pressing enter. 
 
-Currently, your content is still only located on your computer. We need to upload it to the GitHub servers! 
-Go back to your GitHub client, make sure you’re looking at your HangoutContent repository, then click on “Changes”. There will see a page similar to the following:
+Then, paste the code we copied from our project page, and hit enter.
+This has created a folder where you can put your content files.
 
-![My First Commit](images/firstcommit.png)
+![Cloning your Project Folder](images/5.png)
 
-This is where you’ll be “committing” your content files. **Telling GitHub that you’d like to put these files on their servers.** When you’ve written the title of your changes and a description, go ahead and click “commit”. 
+Place the file which you are going to use as your "iframe_url" in your Hangout.xml, in the folder that has just been created.
 
-Now, your content file is ready to be committed. Click **“push to GitHub”** in the top-right hand corner. Your client will now upload your files to the GitHub servers!
+![Putting your content in your project folder](images/6.png)
 
-Once your files have been pushed, feel free to close your Git Client as you will no longer need it for the remaining steps. 
+Currently, your content is still only located on your computer. We need to upload it to the Google Code servers! Go back to your terminal, making sure that you are within your Google Code Project folder ("cd my-project-name"), then type in the following, pressing enter after each line:
+
+
+`git add .`
+
+`git commit -m "Uploading my content files"`
+
+`git push origin --all`
+
+![Uploading your files](images/7.png)
+
+Once your files have been uploaded, feel free to close your Command Line/ Terminal Window as you will no longer need it for the remaining steps. 
 
 **3.7. Accessing your secure files.**
 
-1. Access your profile on GitHub.com by going to http://www.github.com/YOURUSERNAME.
-2. Click on the “Repositories” Tab and then your “HangoutContent” repository.
-3. Click on the file you have just uploaded. In this example, we’ll be clicking on “content.html”. 
-
-![Hangout Content](images/contenthtml.png)
+1. Go back to your Google Code Project online
+2. Click on the "Source" tab, then click "Browse".
+3. Click on the file you have just uploaded. 
 
 We need to access the raw data of this file. Go ahead and click “raw” like below.
 
-![Raw File Click](images/rawclick.png)
+![Raw File Click](images/8.png)
 
 You will be taken to a page that looks like the following:
 
-![Raw Content](images/rawlooking.png)
+![Raw Content](images/9.png)
 
 **The URL above is what you can use as your iFrame URL!**
 
-Copy and paste this into your “properties.yml” file back in the hangoutbuilder templating folder and run the application. You will now have a valid **“hangout.xml”** file which you can also host on GitHub if you wish (though it is not necessary as the hangout.xml can be hosted with a generic http:// domain) and link to when you’re setting up your Google Hangout Application in the next section.
+Copy and paste this into your “properties.yml” file back in the hangoutbuilder templating folder and run the application. You will now have a valid **“hangout.xml”** file which you can upload to your server and link to when you’re setting up your Google Hangout Application in the next section.

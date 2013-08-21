@@ -81,4 +81,4 @@ If you encounter any errors whilst running HangoutBuilder, read the error messag
 
 Now that you've created your "hangout.xml" file, all you need to do now is upload it to the web and link to it when you're creating your Google+ Hangout in Section Four.
 
-If you do not have access to your server, you can upload it to a multitude of services such as [GitHub](http://www.github.com), [Google Code](http://www.code.google.com) or [Amazon Web Services](http://www.aws.amazon.com). In Section Three of this readme, we go over how we can upload content files securely to GitHub. **You can follow the same steps to upload your "hangout.xml" file.**
+If you do not have access to your server, you can upload it to a multitude of services such as [Google Code](http://www.code.google.com) or [Amazon Web Services](http://www.aws.amazon.com). In Section Three of this readme, we go over how we can upload content files securely to Google Code. **You can follow the same steps to upload your "hangout.xml" file.**

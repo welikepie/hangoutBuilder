@@ -43,7 +43,7 @@ Some places where you can do this are:
 
 **OR**
 
-Store the content you wish to display with a service that allows you to use secure https://, such as [GitHub](www.github.com), [Google Code](www.code.google.com) or [Amazon Web Services](www.aws.amazon.com).
+Store the content you wish to display with a service that allows you to use secure https://, such as [Google Code](www.code.google.com) or [Amazon Web Services](www.aws.amazon.com).
 
 If you would like to go the route of uploading your content files, follow the steps in Section Three. 
 
